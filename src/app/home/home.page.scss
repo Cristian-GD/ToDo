@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -16,12 +15,130 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+
+ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --inner-padding-end: 0;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    --background: var(--ion-color-light);
+    transform: translateX(5px);
+  }
+}
+
+ion-item-sliding {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  ion-item {
+    --border-radius: 8px;
+  }
+}
+
+ion-fab-button {
+  --background: var(--ion-color-primary);
+  --background-activated: var(--ion-color-primary-shade);
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+}
+
+ion-checkbox {
+  --border-radius: 6px;
+  --size: 22px;
+  margin-right: 12px;
+}
+
+ion-label {
+  h2 {
+    margin: 8px 0;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  p {
+    margin: 4px 0;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+}
+
+ion-item-option {
+  --background: var(--ion-color-primary);
+  font-weight: 500;
+  
+  &[color="danger"] {
+    --background: var(--ion-color-danger);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ion-item-sliding {
+  animation: fadeIn 0.3s ease-out;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  
+  &:hover {
+    background: #555;
+  }
+}
+
+ion-item[color="success"] {
+  --background: rgba(34, 197, 94, 0.1);
+  
+  ion-label h2 {
+    text-decoration: line-through;
+    color: #999;
+  }
+}
+
+ion-item[lines="none"] {
+  --background: transparent;
+  margin-top: 40px;
+  
+  ion-label {
+    text-align: center;
+    
+    p {
+      color: #aaa;
+      font-size: 16px;
+    }
+  }
 }
