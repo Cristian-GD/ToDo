@@ -140,7 +140,7 @@ export class HomePage {
     this.toastMessage = message;
     this.isToastOpen = true;
     
-    // Cerrar solo pasado 3 segundos
+    // Cerrar pasado el tiempo establecido
     setTimeout(() => {
       this.isToastOpen = false;
     }, 3000);
